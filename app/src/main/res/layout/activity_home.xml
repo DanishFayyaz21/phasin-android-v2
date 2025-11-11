@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="44dp">
+
+
+            <TextView
+                android:id="@+id/tv_my_account"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_home_menu"
+                android:text="@string/my_account"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:fontFamily="@font/solway_regular_400"
+                android:paddingHorizontal="32dp"
+                android:layout_marginHorizontal="6dp"
+                android:paddingVertical="6dp"
+                app:drawableTopCompat="@drawable/ic_account" />
+
+
+            <TextView
+                android:id="@+id/tv_recent_activities"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_home_menu"
+                android:text="@string/recent_activities"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/solway_regular_400"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="6dp"
+                android:paddingVertical="6dp"
+                app:drawableTopCompat="@drawable/ic_recent_activity" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

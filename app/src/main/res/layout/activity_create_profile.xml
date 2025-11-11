@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center_horizontal"
+    tools:context=".ui.create_account.CreateProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                android:padding="16dp"
+                android:contentDescription="@string/back_button"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_your_profile"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/solway_bold_700"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp">
+
+            <FrameLayout
+                android:id="@+id/avatar_image"
+                android:layout_width="80dp"
+                android:layout_height="90dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/avatar"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#FF0000" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:src="@drawable/ic_edit" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/solway_regular_400"
+                android:text="@string/verified"
+                android:textColor="@color/text_secondary"
+                android:layout_marginHorizontal="12dp"
+                app:drawableStartCompat="@drawable/ic_verified"
+                android:drawablePadding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/avatar_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="@font/solway_regular_400" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:fontFamily="@font/solway_medium_500"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="no"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:inputType="text"
+                    android:textColorHint="@color/text_secondary"
+                    android:hint="@string/name_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_age"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="@font/solway_regular_400" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:fontFamily="@font/solway_medium_500"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="no"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:inputType="text"
+                    android:textColorHint="@color/text_secondary"
+                    android:hint="@string/age_hint" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_gender"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="@font/solway_regular_400" />
+
+                <LinearLayout
+                    android:id="@+id/ll_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/solway_medium_500"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:hint="@string/gender_hint" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_back"
+                        android:rotation="270"
+                        android:layout_marginHorizontal="8dp"
+                        android:contentDescription="@string/back_button"
+                        app:tint="@color/text_secondary" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_location"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="@font/solway_regular_400" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:fontFamily="@font/solway_medium_500"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:hint="@string/location_hint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_occupation"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="@font/solway_regular_400" />
+
+                <EditText
+                    android:id="@+id/et_occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_input"
+                    android:fontFamily="@font/solway_medium_500"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="no"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:inputType="text"
+                    android:textColorHint="@color/text_secondary"
+                    android:hint="@string/occupation_hint" />
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_primary_btn"
+                    android:layout_marginVertical="32dp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/solway_medium_500" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/border"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

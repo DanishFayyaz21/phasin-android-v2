@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/back_button"
+            android:padding="16dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/solway_bold_700"
+            android:text="@string/logout"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/login_image_desc"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/logout_confirmation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="44dp"
+        android:fontFamily="@font/solway_regular_400"
+        android:gravity="center"
+        android:text="@string/logout_info"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout_confirmation_text">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_secondary_btn"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/solway_medium_500"
+            android:textColor="@color/text_primary" />
+
+        <Button
+            android:id="@+id/btn_pause_account"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_secondary_btn"
+            android:text="@string/pause_account"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/solway_medium_500"
+            android:textColor="@color/text_primary" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_primary_btn"
+            android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/solway_medium_500"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_delete_account"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_btn_del"
+            android:text="@string/delete_account"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/solway_medium_500"
+            android:textColor="#EB5757" />
+    </LinearLayout>
+
+</LinearLayout>
